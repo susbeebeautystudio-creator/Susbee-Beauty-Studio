@@ -1,0 +1,193 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "collections": {
+      "users": {
+        "description": "Store application users and roles",
+        "fields": {
+          "displayName": { "type": "string" },
+          "email": { "type": "string" },
+          "phone": { "type": "string" },
+          "role": { "type": "string" },
+          "createdAt": { "type": "timestamp" }
+        }
+      },
+      "bookings": {
+        "description": "Global collection for all bookings",
+        "fields": {
+          "customerId": { "type": "string" },
+          "customerName": { "type": "string" },
+          "customerEmail": { "type": "string" },
+          "customerPhone": { "type": "string" },
+          "serviceName": { "type": "string" },
+          "category": { "type": "string" },
+          "staffName": { "type": "string" },
+          "bookingDate": { "type": "string" },
+          "bookingTime": { "type": "string" },
+          "totalPrice": { "type": "number" },
+          "notes": { "type": "string" },
+          "bookingStatus": { "type": "string" },
+          "paymentStatus": { "type": "string" },
+          "createdAt": { "type": "timestamp" },
+          "updatedAt": { "type": "timestamp" }
+        }
+      },
+      "services": {
+        "description": "Exquisite parlor services & rates",
+        "fields": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "price": { "type": "number" },
+          "duration": { "type": "string" },
+          "category": { "type": "string" },
+          "imageUrl": { "type": "string" },
+          "featured": { "type": "boolean" },
+          "displayOrder": { "type": "number" },
+          "hidden": { "type": "boolean" }
+        }
+      },
+      "gallery": {
+        "description": "Bridal & makeup gallery images",
+        "fields": {
+          "imageUrl": { "type": "string" },
+          "category": { "type": "string" },
+          "caption": { "type": "string" },
+          "sortOrder": { "type": "number" },
+          "featured": { "type": "boolean" },
+          "hidden": { "type": "boolean" }
+        }
+      },
+      "training_courses": {
+        "description": "Professional training academy courses",
+        "fields": {
+          "title": { "type": "string" },
+          "duration": { "type": "string" },
+          "price": { "type": "string" },
+          "description": { "type": "string" },
+          "imageUrl": { "type": "string" },
+          "hasCertificate": { "type": "boolean" },
+          "curriculum": { "type": "string" },
+          "featured": { "type": "boolean" },
+          "hidden": { "type": "boolean" }
+        }
+      },
+      "team": {
+        "description": "Team members & staff",
+        "fields": {
+          "name": { "type": "string" },
+          "role": { "type": "string" },
+          "experience": { "type": "string" },
+          "description": { "type": "string" },
+          "skills": { "type": "string" },
+          "imageUrl": { "type": "string" },
+          "socialInstagram": { "type": "string" },
+          "socialFacebook": { "type": "string" },
+          "socialTikTok": { "type": "string" },
+          "socialWhatsApp": { "type": "string" },
+          "sortOrder": { "type": "number" },
+          "hidden": { "type": "boolean" }
+        }
+      },
+      "testimonials": {
+        "description": "Client testimonials",
+        "fields": {
+          "customerName": { "type": "string" },
+          "photoUrl": { "type": "string" },
+          "rating": { "type": "number" },
+          "review": { "type": "string" },
+          "date": { "type": "string" },
+          "hidden": { "type": "boolean" }
+        }
+      },
+      "blogs": {
+        "description": "Complete CMS blog posts",
+        "fields": {
+          "title": { "type": "string" },
+          "slug": { "type": "string" },
+          "featuredImageUrl": { "type": "string" },
+          "category": { "type": "string" },
+          "content": { "type": "string" },
+          "tags": { "type": "string" },
+          "seoDescription": { "type": "string" },
+          "publishDate": { "type": "string" },
+          "hidden": { "type": "boolean" }
+        }
+      },
+      "faqs": {
+        "description": "Frequently Asked Questions",
+        "fields": {
+          "question": { "type": "string" },
+          "answer": { "type": "string" },
+          "sortOrder": { "type": "number" },
+          "hidden": { "type": "boolean" }
+        }
+      },
+      "before_after": {
+        "description": "Before and After Transformations",
+        "fields": {
+          "beforeImg": { "type": "string" },
+          "afterImg": { "type": "string" },
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "tags": { "type": "string" },
+          "category": { "type": "string" },
+          "sortOrder": { "type": "number" },
+          "hidden": { "type": "boolean" }
+        }
+      },
+      "special_offers": {
+        "description": "Promotional offers and discount banners",
+        "fields": {
+          "offerImage": { "type": "string" },
+          "offerTitle": { "type": "string" },
+          "offerDescription": { "type": "string" },
+          "expiryDate": { "type": "string" },
+          "buttonText": { "type": "string" },
+          "buttonLink": { "type": "string" },
+          "hidden": { "type": "boolean" }
+        }
+      },
+      "hero_slides": {
+        "description": "Hero section slider backgrounds",
+        "fields": {
+          "imageUrl": { "type": "string" },
+          "title": { "type": "string" },
+          "subtitle": { "type": "string" },
+          "buttonText": { "type": "string" },
+          "buttonLink": { "type": "string" },
+          "displayOrder": { "type": "number" },
+          "hidden": { "type": "boolean" }
+        }
+      },
+      "popup_announcements": {
+        "description": "Banner popup settings",
+        "fields": {
+          "imageUrl": { "type": "string" },
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "buttonText": { "type": "string" },
+          "buttonLink": { "type": "string" },
+          "enabled": { "type": "boolean" },
+          "showOnce": { "type": "boolean" }
+        }
+      },
+      "website_settings": {
+        "description": "Editable sections for Home, Founder, Contact, Footer, Website, SEO and Social settings",
+        "fields": {
+          "sectionId": { "type": "string" },
+          "data": { "type": "object" }
+        }
+      },
+      "reviews": {
+        "description": "User reviews on the home page",
+        "fields": {
+          "stars": { "type": "number" },
+          "text": { "type": "string" },
+          "author": { "type": "string" },
+          "location": { "type": "string" },
+          "hidden": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

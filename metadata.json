@@ -1,0 +1,6 @@
+{
+  "name": "Susbee Beauty Studio and Training Center",
+  "description": "Official website for Susbee Beauty Studio and Training Center in Lekhnath, Taalchowk. Explore professional bridal makeup, beauty services, transformations, and certified training courses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
