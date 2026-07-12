@@ -1129,18 +1129,18 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
             ></motion.div>
 
             {/* Content box */}
-            <div className="flex min-h-screen items-center justify-center p-4">
+            <div className="flex min-h-screen items-center justify-center p-2.5 sm:p-4">
               <motion.div
                 initial={{ scale: 0.9, opacity: 0, y: 20 }}
                 animate={{ scale: 1, opacity: 1, y: 0 }}
                 exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                className="relative bg-white w-full max-w-xl rounded-3xl border border-pink-100 shadow-2xl p-6 sm:p-8 space-y-6 overflow-hidden z-10"
+                className="relative bg-white w-full max-w-xl rounded-2xl border border-pink-100 shadow-2xl p-5 sm:p-8 space-y-4 sm:space-y-6 max-h-[92vh] overflow-y-auto z-10"
               >
                 <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600"></div>
 
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="font-serif text-2xl font-black text-pink-900">Book Appointment</h3>
+                    <h3 className="font-serif text-xl sm:text-2xl font-black text-pink-900">Book Appointment</h3>
                     <p className="text-[11px] text-gray-400 mt-1">Make a safe, secure salon reservation in real-time.</p>
                   </div>
                   <button
@@ -1151,8 +1151,8 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
                   </button>
                 </div>
 
-                <form onSubmit={handleNewBooking} className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <form onSubmit={handleNewBooking} className="space-y-3.5 sm:space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                     <div>
                       <label className="block text-[10px] font-bold uppercase tracking-wider text-pink-950 mb-1">
                         Your Name
@@ -1163,7 +1163,7 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
                         value={bookingName}
                         onChange={(e) => setBookingName(e.target.value)}
                         placeholder="e.g. Priya Sharma"
-                        className="w-full px-4 py-2.5 rounded-xl border border-pink-100 focus:outline-hidden focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-sm"
+                        className="w-full px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-pink-100 focus:outline-hidden focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-sm"
                       />
                     </div>
 
@@ -1179,12 +1179,12 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
                         value={bookingPhone}
                         onChange={(e) => setBookingPhone(e.target.value.replace(/[^0-9]/g, ''))}
                         placeholder="e.g. 9856103666"
-                        className="w-full px-4 py-2.5 rounded-xl border border-pink-100 focus:outline-hidden focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-sm"
+                        className="w-full px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-pink-100 focus:outline-hidden focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-sm"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                     <div>
                       <label className="block text-[10px] font-bold uppercase tracking-wider text-pink-950 mb-1">
                         Email Address
@@ -1195,7 +1195,7 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
                         value={bookingEmail}
                         onChange={(e) => setBookingEmail(e.target.value)}
                         placeholder="e.g. customer@example.com"
-                        className="w-full px-4 py-2.5 rounded-xl border border-pink-100 focus:outline-hidden focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-sm"
+                        className="w-full px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-pink-100 focus:outline-hidden focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-sm"
                       />
                     </div>
 
@@ -1207,7 +1207,7 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
                         required
                         value={bookingService}
                         onChange={(e) => setBookingService(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-pink-100 focus:outline-hidden focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-sm text-gray-700 font-medium"
+                        className="w-full px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-xl border border-pink-100 focus:outline-hidden focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-sm text-gray-700 font-medium bg-white"
                       >
                         <option value="">Select a Service</option>
                         {defaultServices.map((srv, idx) => (
@@ -1217,7 +1217,7 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                     <div>
                       <label className="block text-[10px] font-bold uppercase tracking-wider text-pink-950 mb-1">
                         Preferred Date
@@ -1227,7 +1227,7 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
                         required
                         value={bookingDate}
                         onChange={(e) => setBookingDate(e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-pink-100 focus:outline-hidden focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-sm"
+                        className="w-full px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-pink-100 focus:outline-hidden focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-sm"
                       />
                     </div>
 
@@ -1238,7 +1238,7 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
                       <select
                         value={bookingTime}
                         onChange={(e) => setBookingTime(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-pink-100 focus:outline-hidden focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-sm text-gray-700 font-medium"
+                        className="w-full px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-xl border border-pink-100 focus:outline-hidden focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-sm text-gray-700 font-medium bg-white"
                       >
                         {timeSlots.map((ts, idx) => (
                           <option key={idx} value={ts}>{ts}</option>
@@ -1252,26 +1252,26 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
                       Special Instructions / Notes (Optional)
                     </label>
                     <textarea
-                      rows={4}
+                      rows={2}
                       value={bookingNotes}
                       onChange={(e) => setBookingNotes(e.target.value)}
                       placeholder="e.g. Skin sensitivity details, general beauty preferences, or custom requirements..."
-                      className="w-full px-4 py-2.5 rounded-xl border border-pink-100 focus:outline-hidden focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-sm font-sans resize-none"
+                      className="w-full px-3.5 py-2 rounded-xl border border-pink-100 focus:outline-hidden focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-sm font-sans resize-none"
                     />
                   </div>
 
-                  <div className="flex gap-3 justify-end pt-4">
+                  <div className="flex flex-col-reverse sm:flex-row gap-2 sm:gap-3 justify-end pt-2 sm:pt-4">
                     <button
                       type="button"
                       onClick={() => setShowNewBookingModal(false)}
-                      className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-5 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer"
+                      className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-5 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer w-full sm:w-auto text-center"
                     >
                       Cancel
                     </button>
                     <button
                       type="submit"
                       disabled={bookingSubmitting}
-                      className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-6 py-2.5 rounded-xl text-xs font-bold transition-all shadow-md cursor-pointer disabled:opacity-60"
+                      className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-6 py-2.5 rounded-xl text-xs font-bold transition-all shadow-md cursor-pointer disabled:opacity-60 w-full sm:w-auto text-center"
                     >
                       {bookingSubmitting ? 'Registering Appointment...' : 'Submit Booking'}
                     </button>
@@ -1295,12 +1295,12 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
               className="fixed inset-0 bg-pink-950/40 backdrop-blur-xs"
             ></motion.div>
 
-            <div className="flex min-h-screen items-center justify-center p-4">
+            <div className="flex min-h-screen items-center justify-center p-2.5 sm:p-4">
               <motion.div
                 initial={{ scale: 0.9, opacity: 0, y: 20 }}
                 animate={{ scale: 1, opacity: 1, y: 0 }}
                 exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                className="relative bg-white w-full max-w-md rounded-3xl border border-pink-100 shadow-2xl p-6 sm:p-8 space-y-6 z-10"
+                className="relative bg-white w-full max-w-md rounded-2xl border border-pink-100 shadow-2xl p-5 sm:p-8 space-y-4 sm:space-y-6 max-h-[92vh] overflow-y-auto z-10"
               >
                 <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600"></div>
 
@@ -1319,8 +1319,8 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
                   </button>
                 </div>
 
-                <div className="space-y-4 text-xs font-semibold">
-                  <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-3.5 sm:space-y-4 text-xs font-semibold">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div className="bg-pink-50/20 p-3 rounded-xl border border-pink-100/30">
                       <div className="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Customer Name</div>
                       <div className="text-pink-950">{selectedBooking.customerName}</div>
@@ -1337,7 +1337,7 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
                     <div className="text-pink-600/70 text-[10px] mt-0.5">Category: {selectedBooking.category}</div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div className="bg-pink-50/20 p-3 rounded-xl border border-pink-100/30">
                       <div className="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Assigned Staff</div>
                       <div className="text-pink-950">{selectedBooking.staffName}</div>
@@ -1348,7 +1348,7 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div className="bg-pink-50/20 p-3 rounded-xl border border-pink-100/30">
                       <div className="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Date & Time</div>
                       <div className="text-pink-950">{new Date(selectedBooking.bookingDate).toLocaleDateString()}</div>
@@ -1376,7 +1376,7 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
                 <div className="flex justify-end pt-2">
                   <button
                     onClick={() => setSelectedBooking(null)}
-                    className="bg-pink-900 hover:bg-pink-950 text-white font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider cursor-pointer shadow-md"
+                    className="bg-pink-900 hover:bg-pink-950 text-white font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider cursor-pointer shadow-md w-full sm:w-auto text-center"
                   >
                     Close Overview
                   </button>
@@ -1399,12 +1399,12 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
               className="fixed inset-0 bg-pink-950/40 backdrop-blur-xs"
             ></motion.div>
 
-            <div className="flex min-h-screen items-center justify-center p-4">
+            <div className="flex min-h-screen items-center justify-center p-2.5 sm:p-4">
               <motion.div
                 initial={{ scale: 0.9, opacity: 0, y: 20 }}
                 animate={{ scale: 1, opacity: 1, y: 0 }}
                 exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                className="relative bg-white w-full max-w-sm rounded-3xl border border-pink-100 shadow-2xl p-6 sm:p-8 space-y-6 z-10 text-center"
+                className="relative bg-white w-full max-w-sm rounded-2xl border border-pink-100 shadow-2xl p-5 sm:p-8 space-y-4 sm:space-y-6 z-10 text-center max-h-[92vh] overflow-y-auto"
               >
                 <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600"></div>
 
@@ -1419,17 +1419,17 @@ export default function CustomerDashboard({ initialPhone = '' }: CustomerDashboa
                   </p>
                 </div>
 
-                <div className="flex gap-3 justify-center pt-2">
+                <div className="flex flex-col-reverse sm:flex-row gap-2 sm:gap-3 justify-center pt-2">
                   <button
                     onClick={() => setBookingToCancel(null)}
-                    className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-5 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer"
+                    className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-5 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer w-full sm:w-auto text-center"
                   >
                     No, Keep Booking
                   </button>
                   <button
                     onClick={handleCancelBooking}
                     disabled={cancelLoading}
-                    className="bg-rose-600 hover:bg-rose-700 text-white px-5 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer shadow-md disabled:opacity-60"
+                    className="bg-rose-600 hover:bg-rose-700 text-white px-5 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer shadow-md disabled:opacity-60 w-full sm:w-auto text-center"
                   >
                     {cancelLoading ? 'Cancelling...' : 'Yes, Cancel Session'}
                   </button>
